@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>創り方｜まとめノート</title>
+<meta name="description" content="成果や実用性に結びつかなくても、何かを生み出したい。答えではなく問いを残すこと、アイデアが出てくる環境、AIでつくる建築や写真サイトなど、創ることについての個人的なノート。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f6f5f1;--surface:#fff;--ink:#24231f;--muted:#66625a;--faint:#9d988e;--line:#e3dfd6;--accent:#7a5b8c;--wash:#efebf1}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131516;--surface:#1b1e20;--ink:#e9eae6;--muted:#a9aca6;--faint:#6b6f6b;--line:#2b2f31;--accent:#c2a6d4;--wash:#211c25}}
+  :root[data-theme="dark"]{--bg:#131516;--surface:#1b1e20;--ink:#e9eae6;--muted:#a9aca6;--faint:#6b6f6b;--line:#2b2f31;--accent:#c2a6d4;--wash:#211c25}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.95 "Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:auto;padding:0 16px} @media(min-width:640px){.wrap{padding:0 24px}}
+  a{color:inherit}
+  .top{padding-top:24px}
+  .back{font-size:.75rem;color:var(--muted);text-decoration:none}.back:hover{color:var(--ink)}
+
+  header{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{margin:0 0 16px;font-size:.7rem;letter-spacing:.24em;color:var(--accent);font-weight:700}
+  h1{font:600 clamp(2rem,5.6vw,3rem)/1.45 "Noto Serif JP",serif;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;margin:.1em 0 1.1em;opacity:.85}
+  .lead{margin:0;max-width:34em;color:var(--muted)}
+  .toc{display:flex;flex-wrap:wrap;gap:6px 16px;margin:24px 0 0;padding:0;list-style:none;font-size:.82rem}
+  .toc a{color:var(--accent);text-decoration:none}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .sec-n{display:block;font-size:.7rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:6px}
+  h2{font:600 1.5rem/1.5 "Noto Serif JP",serif;margin:0 0 16px;letter-spacing:.03em}
+  h3{font:600 1.08rem/1.6 "Noto Serif JP",serif;margin:28px 0 10px}
+  p{margin:0 0 16px}
+  .pull{margin:22px 0;padding:4px 0 4px 18px;border-left:2px solid var(--accent);font:500 1.12rem/1.8 "Noto Serif JP",serif}
+
+  ul.points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+  ul.points li{padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:4px;font-size:.94rem}
+  ul.points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:2px}
+  ul.points span{color:var(--muted)}
+
+  .pair{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}
+  @media(min-width:640px){.pair{grid-template-columns:1fr 1fr}}
+  .pair div{padding:16px 18px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+  .pair h4{margin:0 0 4px;font-size:.72rem;letter-spacing:.16em;color:var(--accent)}
+  .pair p{margin:0;font-size:.92rem;color:var(--muted)}
+
+  .note{padding:26px;background:var(--wash);border-radius:4px}
+  .note h2{font-size:1.24rem}
+  .note ul{margin:12px 0 0;padding-left:1.2em}
+  .note li{margin:0 0 9px}
+
+  .src{border-top:1px solid var(--line);margin-top:16px}
+  .src a{display:flex;justify-content:space-between;gap:14px;padding:10px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-size:.92rem}
+  .src a:hover{color:var(--accent)}
+  .src small{color:var(--faint);font-size:.76rem;white-space:nowrap}
+
+  footer{padding:34px 0 60px;color:var(--faint);font-size:.76rem}
+  footer .related{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+  footer .related a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top"><a class="back" href="../">← m-note トップ</a></div>
+  <header>
+    <p class="kicker">WAY OF CREATING</p>
+    <h1>創り方</h1>
+    <p class="mn-tagline">答えではなく、問いを残すものを創りたい。</p>
+    <p class="lead">成果や実用性に結びつかなくてもいい。何かを生み出すこと、そのものを楽しみたい。何を創りたいのかはまだ言葉にしている途中ですが、惹かれるもの、アイデアの生まれ方、創りたいものの候補、創るときに大切にしたいことをまとめていくノートです。</p>
+    <ul class="toc">
+      <li><a href="#why">なぜ創るのか</a></li>
+      <li><a href="#drawn">惹かれるもの</a></li>
+      <li><a href="#idea">アイデアの生まれ方</a></li>
+      <li><a href="#works">創りたいもの</a></li>
+      <li><a href="#craft">創るときの考え方</a></li>
+      <li><a href="#open">まだ確かめていること</a></li>
+    </ul>
+  </header>
+
+  <section id="why">
+    <span class="sec-n">01</span>
+    <h2>なぜ創るのか</h2>
+    <p class="pull">意味は見つけるものではなく、生きながら作っていくもの。</p>
+    <p><a href="../way-of-life/">生き方</a>の柱の一つが「創る」。役に立つかどうかや、誰かに評価されるかどうかではなく、自分の中にあるものを形にすること自体を楽しみたい。</p>
+    <p>きっかけの一つは、挑戦している人を応援したこと。その姿に心を動かされて、自分も何か作品を作ってみたいと思った。そこで浮かんだのが、自分の頭の中をホームページとして表現すること。考えていること、興味のあること、世界の捉え方を、覗いてもらえる形にする。</p>
+    <p>それがこの m-note になった。<strong>このサイトそのものが、最初の作品</strong>です。</p>
+  </section>
+
+  <section id="drawn">
+    <span class="sec-n">02</span>
+    <h2>惹かれるもの</h2>
+    <p class="pull">良い作品は「答え」ではなく「問い」を残せる。</p>
+    <p>物事を考察することが好き。終わったあとも「これは何だったのか」と問いが残り、一つの解釈で終わらず新しい考察が生まれ続ける作品に惹かれる。見終わって終わりではなく、そこから考える時間が始まるもの。</p>
+    <p>DNA、複式簿記、量子力学、脳。ジャンルは違っても、同じ面白さを感じている。惹かれているのは複雑さそのものではなく、<strong>シンプルな構造から、複雑なものが生まれるしくみ</strong>なのかもしれない。</p>
+    <div class="pair">
+      <div><h4>見る</h4><p>被写体を眺めて終わる。</p></div>
+      <div><h4>感じる</h4><p>誰がどんな思いで作ったのか、そこに積み重なった時間、その人の生き方。背景を想像すること。</p></div>
+    </div>
+  </section>
+
+  <section id="idea">
+    <span class="sec-n">03</span>
+    <h2>アイデアの生まれ方</h2>
+    <p class="pull">アイデア ＝ 問い × 静けさ。</p>
+    <p>アイデアは才能より、生まれやすい環境で再現できるのではないか。自分の場合、浮かびやすいのは散歩、シャワーや湯船、泳いでいるとき、サウナのあとの外気浴、寝る前の瞑想、電車の中、そして誰かと話しているとき。</p>
+    <ul class="points">
+      <li><b>問いを持っておく</b><span>何も考えていないのではなく、未解決の問いだけが頭の片隅に残っている状態。</span></li>
+      <li><b>考えるのを手放す</b><span>体が一定のリズムで動き、情報の入力が止まり、頭に余白がある時間に、無意識が勝手に組み合わせはじめる。</span></li>
+      <li><b>話して、言葉にする</b><span>人やAIと話すと、自分の考えをまとめようとして言葉が出てくる。言葉にすることで、新しい考えが生まれる。</span></li>
+    </ul>
+    <p style="margin-top:16px">だから「アイデアを考える」より、<strong>アイデアが自然に出てくる環境をつくる</strong>ことを大切にしたい。浮かんだら、すぐにAIと話して残せるようにしておく。</p>
+  </section>
+
+  <section id="works">
+    <span class="sec-n">04</span>
+    <h2>創りたいもの</h2>
+    <p>まだ候補の段階。形にしたものから、<a href="../joy/">楽しみ方</a>の「これまで」へ移していく。</p>
+    <ul class="points">
+      <li><b>頭の中を覗けるホームページ</b><span>この m-note。対話して、整理して、可視化して、俯瞰して、また考え直す。思考のOSとして育てていく。</span></li>
+      <li><b>AIで、存在しない建築</b><span>森に建てるのではなく、森から生まれた家。苔と岩と植物が溶け合い、建物と森の境界がなくなる。外観から内観、ウォークスルーまで。いずれは森の美術館や図書館へ広げ、架空の建築作品集に。</span></li>
+      <li><b>写真を入り口に、記憶をたどるサイト</b><span>何を撮るかより、何を感じるか。建物・自然・人の写真から、記憶や感情や場所がネットワーク状に広がる。写真に添える文章は、説明ではなく思考の断片。</span></li>
+      <li><b>考察できる物語</b><span>物語より先に、世界を成立させる原理をつくる。最後まで説明しきらず、考察できる余白を残す。</span></li>
+    </ul>
+  </section>
+
+  <section id="craft">
+    <span class="sec-n">05</span>
+    <h2>創るときの考え方</h2>
+    <h3>原理から設計する</h3>
+    <p>物語なら、基本原理 → 世界の構造 → 人間・AI → 出来事 → 物語 → 考察、の順に考える。表面から作るのではなく、それを成り立たせているルールから作る。少ない要素から、複雑なものが生まれるように。</p>
+    <h3>余白を残す</h3>
+    <p>全部を説明しきらない。見る人が自分で連想の道筋を選べるように、余白と余韻を残す。デザインも、ミニマルで、静かで、大きな余白のあるものに惹かれる。</p>
+    <h3>境界をなくす</h3>
+    <p>建築と自然、写真と記憶。対立させたり並べたりするのではなく、溶け合って一つのものに見えるところに、自分の興味がある。</p>
+    <h3>「誰が話すか」もデザインする</h3>
+    <p>同じ内容でも、誰が、どんな色や装いで伝えるかで印象は変わる。色彩やファッションも、自分を表現するための素材として学んでいきたい。</p>
+    <h3>AIを、制作環境として使う</h3>
+    <p>AIは答えを出してもらう道具というより、壁打ち相手であり、存在しないものを設計して体験するための環境。考えるのは自分、形にするのを一緒に手伝ってもらう。</p>
+  </section>
+
+  <section id="open">
+    <div class="note">
+      <h2>このノートで、まだ確かめていること</h2>
+      <ul>
+        <li>自分が本当に作品で扱いたい「一つの原理」は何なのか。存在、意識、情報、時間、因果、認識のどれに近いのか。</li>
+        <li>小説、ゲーム、映像、Web。どの媒体が、その構造をいちばん表現しやすいのか。</li>
+        <li>作者の決めた「真実」を置くのか、複数の解釈が成り立つ世界にするのか。</li>
+        <li>何を創りたいのか。それを言葉にすること自体が、いまの創作なのかもしれない。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <h2 style="font-size:1.2rem">このノートの元になったつぶやき</h2>
+    <nav class="src">
+      <a href="../musings/posts/p124.html">答えではなく、問いを残す<small>2026.09.17</small></a>
+      <a href="../musings/posts/p103.html">森に建てるのではなく、森から生まれた家<small>2026.08.29</small></a>
+      <a href="../musings/posts/p100.html">「誰が話すか」も、デザインする<small>2026.08.29</small></a>
+      <a href="../musings/posts/p093.html">考えるのではなく、出てくる環境をつくる<small>2026.08.27</small></a>
+      <a href="../musings/posts/p073.html">少しだけ、一緒に冒険する<small>2026.08.13</small></a>
+      <a href="../musings/posts/p064.html">発見するのではなく、作っていく<small>2026.08.11</small></a>
+      <a href="../musings/posts/p130.html">色彩<small>2026.08.11</small></a>
+      <a href="../musings/posts/p060.html">見るから、感じるへ<small>2026.08.09</small></a>
+      <a href="../musings/posts/p077.html">ホームページを思考のOSとして育てる<small>2026.07.20</small></a>
+      <a href="../musings/posts/p003.html">アイデア ＝ 問い × 静けさ。<small>2026.07.19</small></a>
+    </nav>
+  </section>
+
+  <footer>
+    <p class="related">あわせて読む：<a href="../way-of-life/">生き方</a> ・ <a href="../joy/">楽しみ方</a> ・ <a href="../thinking/">考え方</a> ・ <a href="../about/">m-note について</a></p>
+    <p>専門家ではない個人が、自分のために書きとめている個人的なノートです。</p>
+    <p><a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</main>
+</body>
+</html>
